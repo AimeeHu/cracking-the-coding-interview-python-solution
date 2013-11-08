@@ -22,7 +22,7 @@ def sortStack(s):
     sortedStack = Stack()
     while not s.isEmpty():
         data = s.pop()      
-        while (not sortedStack.isEmpty()) and sortedStack.peek() < data:
+        while (not sortedStack.isEmpty()) and sortedStack.peek() > data:
             stack.push(sortedStack.pop())
         sortedStack.push(data)
     return sortedStack
